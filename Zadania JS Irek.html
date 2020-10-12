@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
             crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    
         <title>Home works from JavaScript</title>
     </head>
 
@@ -27,16 +28,73 @@
             <div class="row no-gutters pb-2">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" name="button_z1" id="button_z1" value="Sprawdź liczbę"  width="10px">Button</button>
+                        <button class="btn btn-outline-secondary" type="button" name="button_z1" id="button_z1" value="Sprawdź liczbę"  width="10px">Sprawdź liczbę</button>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" id="input_z1" value="Wpisz wiek:" name="input_z1">   
                 </div>
-            </div>        
+            </div>    
+            
+            <div class="row no-gutters">
+                <div class="col-lg-12">
+                    <div class="card card-title p-3 m-0 bg-dark text-white">
+                        <h1>Zadanie 2</h1>
+                    </div>
+                    <div class="card card-body  bg-secondary text-white">
+                        <p>Zdefiniuj w zewnętrznym pliku (np. main.js) funkcję sprawdz_z2(), której działanie będzie polegać na zamianie wpisanej cyfry w polu input o id "input_z2", na nazwę dnia tygodnia. Jeżeli w inpucie wpiszemy 5 i naciśniemy przycisk "Sprawdź dzień", funkcja ma wyświetlić komunikat "Piątek". Numerację dni tygodnia rozpoczynami od 1 - Poniedziałek, kończymy na 7 - Niedziela. Każda inna wpisana wartość (default) ma spowodować wypisanie komuunikatu "Błędny numer dnia tygodnia - ale fail!" </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters pb-2">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button" name="button_z2" id="button_z2" value="Sprawdź dzień"  width="10px">Sprawdź dzień</button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" id="input_z2" value="Podaj liczbę (1-7):" name="input_z2">   
+                </div>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-lg-12">
+                    <div class="card card-title p-3 m-0 bg-dark text-white">
+                        <h1>Zadanie 3</h1>
+                    </div>
+                    <div class="card card-body  bg-secondary text-white">
+                        <p>Stwórz pole checkbox o nazwie i id zad_3_cb i przypisz do niego funkcję onclick o nazwie sprawdz_cb_zad3(), która będzie wypisywać komunikat po każdym kliknięciu w pole. Jeżeli pole będzie zaznaczone powinno zostać wyświetlone okienko z informacją "Pole zaznaczone!" w przeciwnym przypadku (else) komunikat "Pole odznaczone!". Wykorzystaj instrukcję if.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters pb-2">
+                <div class="form-check">  
+                    <input type="checkbox" class="form-check-input" name="zad_3_cb" id="zad_3_cb">  
+                    <label class="form-check-label" for="exampleCheck1">Sprawdź mnie !</label> 
+                </div>    
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-lg-12">
+                    <div class="card card-title p-3 m-0 bg-dark text-white">
+                        <h1>Zadanie 4</h1>
+                    </div>
+                    <div class="card card-body  bg-secondary text-white">
+                        <p>Napisz funkcję sayHello przyjmującą jeden argument, który jest obiektem zawierającym dane osoby. Jeśli przekazany obiekt ma własność name, Twoja funkcja powinna wypisać w konsoli “Hello, name!”. Jeśli nie, funkcja ma wypisać tylko “Hello!”. Przykładowy obiekt do wywołania funkcji to <kbd>const person = { name: "Jill", age: 25, hobby: "sports" }</kbd></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters pb-2">
+                <div class="form-check">  
+                    <input type="checkbox" class="form-check-input" name="zad_4_cb" id="zad_4_cb">  
+                    <label class="form-check-label" for="exampleCheck2">Czy obiekt Person ma posiadać imię ?</label>
+                </div>
+                <br>
+            </div>
+            <div class="row no-gutters"></div>
+                <button class="btn btn-outline-secondary" type="button" name="button_z4" id="button_z4" value="Hello /somebody/"  width="10px">Hello /somebody/ </button>
+            </div>
         </div>>
         
         <script>
-            var input = document.querySelector("#input_z1");
-            var btn = document.querySelector("#button_z1");
+            let input_z1 = document.querySelector("#input_z1");
+            let btn_z1 = document.querySelector("#button_z1");
 
             function sprawdz_z1(x){
                 if(x > 10){
@@ -45,7 +103,7 @@
                     alert("Błąd! Warunek niespełniony!"); 
                 }
             }
-            btn.addEventListener("click", function(){sprawdz_z1(input.value);} ,false);
+            btn_z1.addEventListener("click", function(){sprawdz_z1(input_z1.value);} ,false);
         </script>
 
         <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -55,5 +113,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
