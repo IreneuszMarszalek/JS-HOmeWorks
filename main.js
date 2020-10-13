@@ -14,6 +14,8 @@ let checkbox_z3 = document.querySelector("#zad_3_cb");
 let checkbox_z4 = document.querySelector("#zad_4_cb");
 let btn_z4 = document.querySelector("#button_z4");
 
+let btn_z5 = document.querySelector("#button_z5");
+
 
 function sprawdz_z2(number_of_the_day){
     switch(number_of_the_day){
@@ -72,6 +74,20 @@ function sayHello(person){
     }
 }
 
+const students = ["John", "Bill", "Emma", "Stella", "Rob", "Irek"];
+
+function losuj(tab){
+    let tbl_size = tab.length;
+    let random = Math.floor(Math.random()*tbl_size);
+   
+    if(random>=6){
+        random=tbl_size-1;
+    }
+
+    alert(tab[random]);
+}
+
 btn_z2.addEventListener("click", function(){sprawdz_z2(input_z2.value);} ,false);
 checkbox_z3.addEventListener("click", function(){sprawdz_cb_zad3(checkbox_z3.checked);} ,false);
 btn_z4.addEventListener("click", function(){sayHello(person);} ,false);
+btn_z5.addEventListener("click", function(){losuj(students);} ,false);
